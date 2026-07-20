@@ -28,7 +28,7 @@ import jakarta.validation.Valid;
 @CrossOrigin(origins = "*", allowedHeaders = "*") //aceita reposição de fora do backend
 public class PostagemController {
 
-	@Autowired  //metraz todos os metodos da minha tabela postagem
+	@Autowired  //me traz todos os metodos da minha tabela postagem
 	private PostagemRepository postagemRepository;
 	
 	// equivalente SELECT * FROM tb_postegem;
@@ -84,8 +84,8 @@ public class PostagemController {
 		
 		if(postagem.isEmpty())
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-		// Delete FROM tb_postagens WHERE id = ?;
-	postagemRepository.deleteById(id);
+		postagemRepository.deleteById(id);
+		// equivalente Delete FROM tb_postagens WHERE id = ?;
 	}
 
 }
