@@ -36,7 +36,7 @@ public class PostagemController {
 	@Autowired
 	private TemaRepository temaRepository;
 	
-	// equivalente SELECT * FROM tb_postegem;
+	// equivalente SELECT * FROM tb_postagem;
 	@GetMapping //metodo get do http
 	public ResponseEntity<List<Postagem>> getAll(){
 		return ResponseEntity.ok(postagemRepository.findAll());
